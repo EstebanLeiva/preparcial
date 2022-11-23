@@ -1,0 +1,38 @@
+
+
+<div class="container-fluid">
+  <p class="h3 p-3">{{ book.name }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ book.image }}"
+          alt="{{ book.name }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+
+        <dt>ISBN</dt>
+        <dd>{{ book.isbn }}</dd>
+
+        <hr />
+
+        <dt>Publishing Date</dt>
+        <dd>{{ book.publishingDate }}</dd>
+
+        <hr />
+
+        <dt class="bold">Editorial</dt>
+        <dd class="caption">{{ book.editorial.id }}</dd>
+
+        <hr />
+
+        <dt class="bold">Description</dt>
+        <dd>{{ book.description }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+
+<div *ngIf="selected">
+  <app-book-detail [book]="selectedBook"></app-book-detail>
+ </div>
+
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Nombre</th>
+          <th class="h4">ISBN</th>
+          <th class="h4">Editorial</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books" >
+          <td (click)="onSelected(book)">
+            <dd>{{book.name}}</dd>
+          </td>
+          <td>
+            <dd>{{book.isbn}}</dd>
+          </td>
+          <td>
+            <dd>{{book.editorial.id}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
